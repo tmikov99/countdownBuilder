@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>Countdown Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <noscript>
+      <h2 style="color: #ff0000">Seems your browser doesn't support Javascript! Websocket relies on Javascript being
+        enabled. Please enable Javascript and reload this page!
+      </h2>
+    </noscript>
+    <div id="main-content" class="container">
+      <video id="media-container">
+      </video>
+      <div class="countdown-info">
+        <h1 id="countdown-title"></h1>
+        <div class="time-remaining">
+          <div class="time-section">
+            <span id="days">0</span>
+            <p>Days</p>
+          </div>
+          <p>:</p>
+          <div class="time-section">
+            <span id="hours">0</span>
+            <p>Hours</p>
+          </div>
+          <p>:</p>
+          <div class="time-section">
+            <span id="minutes">0</span>
+            <p>Minutes</p>
+          </div>
+          <p>:</p>
+          <div class="time-section">
+            <span id="seconds">0</span>
+            <p>Seconds</p>
+          </div>
+        </div>
+        <h2 id="countdown-completed">Completed!</h2>
+      </div>
+      <button id="open-settings">⚙️ Edit</button>
+      <div id="settings-dialog" class="modal hidden">
+        <div class="modal-content">
+          <span id="discard-settings">✖</span>
+          <h2>Countdown Settings</h2>
+          <label>
+            Title:
+            <input type="text" id="title-input" />
+          </label>
+          <label>
+            Background (image or video URL):
+            <input type="text" id="bg-input" />
+          </label>
+          <label>
+            Countdown Date:
+            <input type="datetime-local" id="date-input" />
+          </label>
+          <button id="save-settings">Save Changes</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
